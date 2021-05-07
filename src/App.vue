@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- https://www.freepik.com/vectors/background -> Background vector created by starline - www.freepik.com -->
+  <div class="main-container">
+    <navigation/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import navigation from './components/Navigation';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    navigation: navigation
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+  #app {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  body{
+    font-family: Roboto;
+    margin: 0px;
+    background-image: url('../public/img/18410.jpg');
+    background-size: cover;
+  }
+  .main-container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 </style>
